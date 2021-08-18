@@ -87,6 +87,7 @@ export function _proccessSetting(context: ComponentFramework.Context<IInputs>) {
     targetEntityFilter: context.parameters.targetentityfilter.raw ? context.parameters.targetentityfilter.raw : "",
     // Relationship structure is different when entity refers back to itself
     isSelfReference: (context as any).page.entityTypeName === context.parameters.targetentityname.raw,
+    enableLinkToRecord: context.parameters.enableLinkToRecord.raw?.toLowerCase() === "true"
   }
   return setting;
 }

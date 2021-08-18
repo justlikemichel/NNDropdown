@@ -14,11 +14,13 @@ export interface Setting {
     targetEntityName: string;    
     targetEntityFilter: string; 
     isSelfReference : boolean;
+    enableLinkToRecord: boolean;
 }
 
 export interface EntityReference {
     entityType: string;
     id: string;
+    name?: string;
 }
 
 export interface DropDownOption {
